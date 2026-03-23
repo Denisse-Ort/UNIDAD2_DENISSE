@@ -1,70 +1,39 @@
-# ✍️ Bitácora de Proyecto: Animación 2D con Grease Pencil en Blender
+# Proceso de creación de una animación 2D en Blender
 
-Este repositorio documenta el flujo de trabajo técnico y creativo para la creación de una secuencia de animación de 6 poses, integrando herramientas de dibujo 2D en un entorno 3D.
+## 1. Configuración inicial del entorno de trabajo
+En primer lugar, se procedió a crear un nuevo proyecto en Blender utilizando un lienzo en 2D. Posteriormente, se organizó el área de trabajo con el objetivo de optimizar el flujo de trabajo, ajustando las ventanas y herramientas necesarias para la animación.
 
----
+## 2. Creación de capas y materiales
+Se configuraron dos capas principales dentro del proyecto:
+- La primera capa se destinó exclusivamente a los trazos del dibujo.
+- La segunda capa se utilizó para aplicar el relleno de color.
 
-## 🏗️ 1. Configuración del Entorno de Trabajo
+Asimismo, se crearon tres materiales distintos para el desarrollo de la animación:
+- Un tono de rojo de baja intensidad.
+- Un tono de rojo más fuerte para generar contraste.
+- Un material de color negro para los contornos.
 
-El proyecto inició con la preparación de un lienzo limpio optimizado para animación 2D.
+Dado que la animación no requería una amplia variedad cromática, se optó por una paleta de colores reducida.
 
-* **Lienzo:** Se seleccionó el preset de **2D Animation** en Blender.
-* **Composición de Área:** Se ajustó la vista de la cámara y se organizaron los paneles de la línea de tiempo (Dope Sheet) y propiedades de capas.
+## 3. Integración de imagen de referencia
+Se incorporó una imagen de referencia con el fin de guiar la secuencia de la animación. Esto permitió mantener coherencia visual entre los diferentes fotogramas. Para este proceso, se siguieron las indicaciones proporcionadas en el video de apoyo disponible en Classroom.
 
-### 🎨 Gestión de Capas y Materiales
-Para mantener un flujo no destructivo, se separó el arte en dos canales:
-1. **Capa `Lines`:** Dedicada exclusivamente al trazo negro y contornos.
-2. **Capa `Fills`:** Ubicada debajo de las líneas para el coloreado masivo.
+## 4. Organización de fotogramas
+Se procedió a distribuir los fotogramas en la línea de tiempo, asignando una imagen a cada intervalo correspondiente. Como parte del trabajo solicitado, se elaboraron seis dibujos, los cuales fueron ubicados cada seis fotogramas, con el propósito de generar una animación secuencial adecuada.
 
-**Materiales configurados:**
-* `Stroke_Black`: Estilo sólido para el delineado.
-* `Fill_Red_Light`: Color base para el cuerpo del personaje.
-* `Fill_Red_Dark`: Tono de contraste para profundidad/sombra.
+## 5. Elaboración de los dibujos
+Se realizaron los seis dibujos necesarios para la animación. Aunque estos no presentaron una complejidad elevada, se prestó atención a la continuidad entre cada uno de ellos para asegurar una transición fluida.
 
-> **📸 CAPTURA DE PANTALLA 1:** *Muestra aquí tu panel de capas (Layers) y los slots de materiales.*
-> ![Panel de capas y materiales](Ruta_a_tu_imagen_1.png)
+Durante este proceso, se identificó un error consistente en la duplicación de un mismo dibujo dentro de un solo fotograma. Esta situación fue corregida mediante el uso del modo de edición, eliminando el elemento duplicado.
 
----
+## 6. Ajuste y alineación de la animación
+Una vez completados los dibujos, se llevó a cabo la alineación de los mismos dentro del espacio de trabajo:
+- El primer dibujo fue colocado en el centro del primer fotograma.
+- Posteriormente, los demás dibujos se posicionaron también en el centro, manteniendo una referencia común.
+- Se verificó que la secuencia completa correspondiera con el movimiento deseado en la animación.
 
-## 🎬 2. Desarrollo de la Secuencia (Keyframing)
-
-### Importación de Referencia
-Se integró una **Image Reference** como guía visual para asegurar que las proporciones y la dinámica del movimiento fueran coherentes con la secuencia asignada en Classroom.
-
-### Metodología de Animación
-* **Cantidad de Poses:** 6 dibujos clave.
-* **Timing:** Se estableció un intervalo de **6 fotogramas** entre cada pose para generar un ritmo pausado y claro.
-* **Proceso de Dibujo:** Se utilizó la herramienta *Draw* con estabilización de trazo para definir las siluetas.
-
-> **📸 CAPTURA DE PANTALLA 2:** *Muestra tu área de trabajo con la imagen de referencia al lado de tu dibujo.*
-> ![Referencia y dibujo](Ruta_a_tu_imagen_2.png)
-
----
-
-## 🛠️ 3. Control de Errores y Depuración Técnica
-
-Durante la producción surgieron desafíos técnicos que requirieron el uso de herramientas avanzadas de edición:
-
-1. **Problema de Fotogramas Duplicados:** Se detectaron múltiples dibujos ocupando el mismo espacio temporal en el fotograma 1.
-   * **Solución:** Se utilizó el **Modo Edición** para aislar los trazos redundantes y eliminarlos (`X > Strokes`), dejando una sola pose limpia por cada 6 fotogramas.
-2. **Alineación Espacial:** Para evitar saltos bruscos ("jittering"), se alineó la primera pose al origen y se ajustaron las siguientes basándose en el centro de masa del personaje.
-
-> **📸 CAPTURA DE PANTALLA 3:** *Muestra la línea de tiempo (Dope Sheet) con los rombitos amarillos separados cada 6 espacios.*
-> ![Timeline y Keyframes](Ruta_a_tu_imagen_3.png)
-
----
-
-## 🚀 4. Resultados y Pulido Final
-
-Tras completar los 6 dibujos, se realizó una prueba de reproducción (Playback). Se verificó que la transición entre poses fuera fluida y que los materiales (colores) estuvieran correctamente asignados a sus respectivos trazos.
-
-### Resumen Técnico Final:
-* **Motor de Render:** Eevee (Grease Pencil).
-* **FPS de trabajo:** Ajustado para coincidir con el ritmo de la secuencia.
-* **Técnica:** Animación pose a pose (Pose-to-Pose).
-
-> **📸 CAPTURA DE PANTALLA FINAL:** *Muestra tu Kirby finalizado en el visor de Blender.*
-> ![Resultado Final Kirby](Ruta_a_tu_imagen_4.png)
+## 7. Revisión y resultado final
+Finalmente, se reprodujo la animación para comprobar su funcionamiento. El resultado fue satisfactorio, ya que la secuencia se ejecutó correctamente. No obstante, se realizaron ajustes menores para mejorar la calidad visual y corregir pequeños detalles.
 
 ---
 *Este proyecto fue desarrollado siguiendo las guías de Classroom y con asistencia de IA para la optimización del flujo de trabajo en Blender.*
